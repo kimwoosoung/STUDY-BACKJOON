@@ -1,20 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    int a[10],max,s=0,i;
-    for(int i=0; i<9; i++){
-        scanf("%d",&a[i]);
-      
-    }
-    max=a[0];
-    for(i=0; i<9; i++){
-        if(max<a[i]){
-          max=a[i];
-          s=i;
+    int input, a=0, b=0;
+    for (int i = 1; i < 10; ++i) {
+        scanf("%d", &input);
+        if (input > a) {
+            a = input;
+            b = i;
         }
     }
-  printf("%d ",max);
-  printf("%d",s+1);
-
+    printf("%d\n%d\n", a, b);
+    
     return 0;
 }
