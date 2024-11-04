@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    int a,b,c[10000];
-    scanf("%d %d", &a,&b);
+    int i, count, num;
+    int arr[10000];
+    scanf("%d %d", &count, &num);
     
-    for (int i=0; i<a; i++){
-        scanf("%d",&c[i]);
-        if(c[i]<b)
-            printf("%d ", c[i]);
+    for (i = 0; i < count; i++){
+        scanf("%d", &arr[i]);
+        if(arr[i] < num)
+            printf("%d ", arr[i]);
     }
 }
