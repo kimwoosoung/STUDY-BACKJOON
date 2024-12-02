@@ -1,22 +1,22 @@
 #include <stdio.h>
 
-int main() {
-    int a,b,c;
-    while(1){
-        int a1,b1,c1;
-        scanf("%d %d %d",&a,&b,&c);
-        if(a==0 && b==0 && c==0)break;
-        a1=a*a;
-        b1=b*b;
-        c1=c*c;
-        if(a1+b1==c1 || b1+c1==a1 || a1+c1==b1){
-            printf("right");
+int main(void)
+{
+    long n1, n2, n3;
+    
+    while(1)
+    {
+        long num1, num2, num3;
+        scanf("%ld %ld %ld", &n1, &n2, &n3);
+        if(n1 == 0 && n2 == 0 && n3 == 0) break;
+        
+        num1 = n1 * n1, num2 = n2 * n2, num3 = n3 * n3;
+        if(num1 + num2 == num3 || num1 + num3 == num2 || num2 + num3 == num1){
+            printf("right\n");
         }
         else{
-            printf("wrong");
-        }
-        printf("\n");
+            printf("wrong\n");
+        } 
     }
-
     return 0;
 }
